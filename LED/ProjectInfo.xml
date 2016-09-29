@@ -50,20 +50,30 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\KSDK1.c</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\LED1.c</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\LEDpin1.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\PE_LDD.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\Vectors.c</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\WAIT1.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Sources\Events.c</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Sources\main.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\Cpu.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\IO_Map.h</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\KSDK1.h</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\LED1.h</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\LEDpin1.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\PE_Const.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\PE_Error.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\PE_LDD.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Generated_Code\WAIT1.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Sources\Events.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Static_Code\IO_Map\MK22F12.h</PathName>
       <PathName>C:\Users\Matthias\Documents\Schweg_Web\LED\Static_Code\PDD\ADC_PDD.h</PathName>
