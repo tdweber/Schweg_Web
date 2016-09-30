@@ -30,17 +30,10 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Events.h"
-#include "TU_MCP4728.h"
-#include "MCP4728_LDAC.h"
-#include "BitIoLdd20.h"
-#include "MCP4728_RDY.h"
-#include "BitIoLdd21.h"
-#include "CLS1.h"
-#include "BT1.h"
-#include "Serial1.h"
-#include "ASerialLdd1.h"
-#include "FRTOS1.h"
-#include "RTT1.h"
+#include "LEDPin1.h"
+#include "BitIoLdd1.h"
+#include "LEDPin2.h"
+#include "BitIoLdd2.h"
 #include "WAIT1.h"
 #include "CS1.h"
 #include "HF1.h"
@@ -68,6 +61,7 @@ int main(void)
   /* Write your code here */
   /* For example: for(;;) { } */
   APP_Start();
+
 #if 0
   Bit1_ClrVal();
   Bit1_SetVal();

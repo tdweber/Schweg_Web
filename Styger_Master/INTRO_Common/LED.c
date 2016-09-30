@@ -12,17 +12,25 @@
 
 void LED_Deinit(void) {
   LED1_Off();
-  LED2_Off();
-  LED3_Off();
+  //LED2_Off();
+  //LED3_Off();
 #if PL_CONFIG_NOF_LEDS>=4
   #error "only 3 LEDs supported"
 #endif
 }
 
 void LED_Init(void) {
+	  for(;;){
+		  LED1_On();
+		  WAIT1_Waitms(250);
+		  LED2_On();
+		  LED1_Off();
+		  WAIT1_Waitms(250);
+		  LED2_Off();
+	  }
   LED1_Off();
-  LED2_Off();
-  LED3_Off();
+  //LED2_Off();
+  //LED3_Off();
 }
 
 #endif /* PL_CONFIG_HAS_LEDS */
