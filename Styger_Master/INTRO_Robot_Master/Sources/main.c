@@ -60,6 +60,8 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
+  int x;
+  x = *(uint16_t*)(0x1234)=0;
   APP_Start();
 
 #if 0
