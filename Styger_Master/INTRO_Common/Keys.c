@@ -19,9 +19,11 @@
 #if PL_CONFIG_BOARD_IS_ROBO_V2
   #include "PORT_PDD.h"
 #endif
+#if "PL_CONFIG_HAS_RTOS"
 #include "FreeRTOSConfig.h"
 #if configUSE_SEGGER_SYSTEM_VIEWER_HOOKS
   #include "SYS1.h"
+#endif
 #endif
 
 void KEY_Scan(void) {
