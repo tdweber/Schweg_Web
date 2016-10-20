@@ -12,7 +12,7 @@
 #include "CLS1.h"
 #include "Application.h"
 #if PL_CONFIG_HAS_RTOS
-#include "FRTOS1.h"
+  #include "FRTOS1.h"
 #endif
 #if PL_CONFIG_HAS_BLUETOOTH
   #include "BT1.h"
@@ -285,7 +285,7 @@ static void ShellTask(void *pvParameters) {
     FRTOS1_vTaskDelay(10/portTICK_PERIOD_MS);
   } /* for */
 }
-#endif
+#endif /* PL_CONFIG_HAS_RTOS */
 
 void SHELL_Init(void) {
   SHELL_val = 0;

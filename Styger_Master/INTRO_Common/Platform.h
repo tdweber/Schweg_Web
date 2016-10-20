@@ -57,14 +57,14 @@
 
 /* driver configuration: first entry (0 or 1) disables or enables the driver. Using the _DISABLED define the local configuration can disable it too */
 /* general features */
-//#define PL_CONFIG_HAS_LEDS              (1 && !defined(PL_LOCAL_CONFIG_HAS_LEDS_DISABLED)) /* LED driver */
-//#define PL_CONFIG_HAS_EVENTS            (1 && !defined(PL_LOCAL_CONFIG_HAS_EVENTS_DISABLED)) /* event driver */
-//#define PL_CONFIG_HAS_TIMER             (1 && !defined(PL_LOCAL_CONFIG_CONFIG_HAS_TIMER_DISABLED)) /* timer interrupts */
-//#define PL_CONFIG_HAS_KEYS              (1 && !defined(PL_LOCAL_CONFIG_HAS_KEYS_DISABLED)) /* support for keys */
+#define PL_CONFIG_HAS_LEDS              (1 && !defined(PL_LOCAL_CONFIG_HAS_LEDS_DISABLED)) /* LED driver */
+#define PL_CONFIG_HAS_EVENTS            (1 && !defined(PL_LOCAL_CONFIG_HAS_EVENTS_DISABLED)) /* event driver */
+#define PL_CONFIG_HAS_TIMER             (1 && !defined(PL_LOCAL_CONFIG_HAS_TIMER_DISABLED)) /* timer interrupts */
+#define PL_CONFIG_HAS_KEYS              (1 && !defined(PL_LOCAL_CONFIG_HAS_KEYS_DISABLED)) /* support for keys */
 #define PL_CONFIG_HAS_TRIGGER           (1 && !defined(PL_LOCAL_CONFIG_HAS_TRIGGER_DISABLED)) /* support for triggers */
 #define PL_CONFIG_HAS_DEBOUNCE          (1 && !defined(PL_LOCAL_CONFIG_HAS_DEBOUNCE_DISABLED)) /* support for debouncing */
 #define PL_CONFIG_HAS_RTOS              (1 && !defined(PL_LOCAL_CONFIG_HAS_RTOS_DISABLED)) /* RTOS support */
-//#define PL_CONFIG_HAS_SHELL             (1 && !defined(PL_LOCAL_CONFIG_HAS_SHELL_DISABLED)) /* shell support disabled for now */
+#define PL_CONFIG_HAS_SHELL             (1 && !defined(PL_LOCAL_CONFIG_HAS_SHELL_DISABLED)) /* shell support disabled for now */
 #define PL_CONFIG_HAS_SEGGER_RTT        (1 && !defined(PL_LOCAL_CONFIG_HAS_SEGGER_RTT_DISABLED) && PL_CONFIG_HAS_SHELL) /* using RTT with shell */
 #define PL_CONFIG_HAS_SHELL_QUEUE       (1 && !defined(PL_LOCAL_CONFIG_HAS_SHELL_QUEUE_DISABLED) && PL_CONFIG_HAS_SHELL) /* enable shell queueing */
 #define PL_CONFIG_SQUEUE_SINGLE_CHAR    (1 && !defined(PL_LOCAL_CONFIG_HAS_SQUEUE_SINGLE_CHAR_DISABLED) && PL_CONFIG_HAS_SHELL_QUEUE) /* using single character shell queue */
