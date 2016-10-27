@@ -39,10 +39,13 @@
 #include "AS1.h"
 #include "ASerialLdd3.h"
 #include "CLS1.h"
+#include "FRTOS1.h"
+#include "RTOSCNTRLDD1.h"
 #include "TI1.h"
 #include "TimerIntLdd1.h"
 #include "TU1.h"
 #include "RTT1.h"
+#include "SYS1.h"
 #include "BUZ1.h"
 #include "BitIoLdd4.h"
 #include "WAIT1.h"
@@ -76,7 +79,8 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-  APP_Start();
+  //APP_Start();
+  RTOS_Run();
 #if 0
   Bit1_ClrVal();
   Bit1_SetVal();
