@@ -20,11 +20,13 @@ static void AppTask(void* param) {
   for(;;) {
     if (*whichLED==1) {
       LED1_Neg();
+      FRTOS1_vTaskDelay(pdMS_TO_TICKS(100));
     } else if (*whichLED==2) {
       LED2_Neg();
+      FRTOS1_vTaskDelay(pdMS_TO_TICKS(500));
     }
     /* \todo handle your application code here */
-    //FRTOS1_vTaskDelay(pdMS_TO_TICKS(500));
+
   }
 }
 
@@ -34,7 +36,11 @@ void RTOS_Init(void) {
 
   EVNT_SetEvent(EVNT_STARTUP); /* set startup event */
   /*! \todo Create tasks here */
-  if (FRTOS1_xTaskCreate(AppTask, (uint8_t *)"App1", configMINIMAL_STACK_SIZE, (void*)&led1, tskIDLE_PRIORITY, NULL) != pdPASS) {
+  if (FRTOS1_xTaskCreate(AppTask, (uint8_t *)"App1", configMINIMAL_STACK_SIZE, (void*)&led1, tskIDLE_PRIORITY+1, NULL) != pdPASS) {
+    for(;;){} /* error case only, stay here! */
+  }
+
+  if (FRTOS1_xTaskCreate(AppTask, (uint8_t *)"App2", configMINIMAL_STACK_SIZE, (void*)&led2, tskIDLE_PRIORITY+1, NULL) != pdPASS) {
     for(;;){} /* error case only, stay here! */
   }
 }
@@ -45,6 +51,7 @@ void RTOS_Deinit(void) {
 
 void RTOS_Run(void){
 	RTOS_Init();
+	//vTaskStartScheduler();
 }
 
 #endif /* PL_CONFIG_HAS_RTOS */

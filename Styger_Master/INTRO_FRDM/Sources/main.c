@@ -57,6 +57,7 @@
 #include "AS1.h"
 #include "ASerialLdd1.h"
 #include "RTT1.h"
+#include "SYS1.h"
 #include "FRTOS1.h"
 #include "WAIT1.h"
 #include "CS1.h"
@@ -84,8 +85,8 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-  APP_Start();
-
+  //APP_Start();
+  RTOS_Run();
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
   #ifdef PEX_RTOS_START

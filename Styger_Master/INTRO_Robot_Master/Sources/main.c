@@ -80,7 +80,7 @@ int main(void)
   /* Write your code here */
   /* For example: for(;;) { } */
   //APP_Start();
-  RTOS_Run();
+  //RTOS_Run();
 #if 0
   Bit1_ClrVal();
   Bit1_SetVal();
