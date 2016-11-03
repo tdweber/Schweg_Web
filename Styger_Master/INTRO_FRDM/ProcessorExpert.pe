@@ -3,7 +3,7 @@
   <Header>
     <Name>INTRO_FRDM_Master</Name>
     <SavedBy>Erich Styger Local</SavedBy>
-    <ModificationStamp>18</ModificationStamp>
+    <ModificationStamp>26</ModificationStamp>
     <Date>2016-09-20</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1550-0615</PEversion>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>94</ProjectCompNumb>
+    <ProjectCompNumb>100</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -4476,7 +4476,7 @@
       <Count>0</Count>
     </BoolList_FpgaConfig>
     <BoolList_BeanConfig>
-      <Count>36</Count>
+      <Count>37</Count>
       <ItemId0>2</ItemId0>
       <Value0>true</Value0>
       <ItemId1>4</ItemId1>
@@ -4526,9 +4526,9 @@
       <ItemId23>49</ItemId23>
       <Value23>true</Value23>
       <ItemId24>50</ItemId24>
-      <Value24>true</Value24>
+      <Value24>false</Value24>
       <ItemId25>52</ItemId25>
-      <Value25>true</Value25>
+      <Value25>false</Value25>
       <ItemId26>53</ItemId26>
       <Value26>true</Value26>
       <ItemId27>55</ItemId27>
@@ -4546,9 +4546,11 @@
       <ItemId33>62</ItemId33>
       <Value33>true</Value33>
       <ItemId34>73</ItemId34>
-      <Value34>false</Value34>
+      <Value34>true</Value34>
       <ItemId35>75</ItemId35>
-      <Value35>false</Value35>
+      <Value35>true</Value35>
+      <ItemId36>97</ItemId36>
+      <Value36>true</Value36>
     </BoolList_BeanConfig>
     <BoolList_TaskConfig>
       <Count>0</Count>
@@ -21471,7 +21473,7 @@
     <BeanType>TimerInt</BeanType>
     <Name>TI1</Name>
     <CompNumb>50</CompNumb>
-    <CompEnabled>true</CompEnabled>
+    <CompEnabled>false</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>TMRCNTR</IconName>
     <UserFolderName />
@@ -21792,7 +21794,7 @@
               <ItemSymbol>IntPeriodTmg</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>init:10 ms;prec:5%;RTS:none;clksrc_presc[SpeedMode0]Auto select;clksrc_presc[SpeedMode1]Auto select;clksrc_presc[SpeedMode2]Auto select;clksrc_presc[SpeedMode3]Auto select;clksrc_presc[SpeedMode4]Auto select;clksrc_presc[SpeedMode5]Auto select;clksrc_presc[SpeedMode6]Auto select;clksrc_presc[SpeedMode7]Auto select</Value>
+              <Value>10 ms</Value>
               <RuntimeSetting>0</RuntimeSetting>
               <ReqDevPrescHigh>-1</ReqDevPrescHigh>
               <ReqDevPrescLow>-1</ReqDevPrescLow>
@@ -21826,8 +21828,6 @@
               <List lines_count="0" />
               <UnitText>ms</UnitText>
               <MinCounterTicks>0</MinCounterTicks>
-              <ControlledTimingCfgFromPropertySymbol>Tmg_ChanOffset0</ControlledTimingCfgFromPropertySymbol>
-              <ControlledTimingCfgFromComponentRef>LinkedTimerUnit</ControlledTimingCfgFromComponentRef>
             </ItemState>
             <ItemState>
               <ItemSymbol>_InitGrp</ItemSymbol>
@@ -21947,7 +21947,7 @@
               <ItemSymbol>Config</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>0</Value>
+              <Value />
             </ItemState>
             <ItemState>
               <ItemSymbol>RefComp</ItemSymbol>
@@ -22397,7 +22397,7 @@
     <BeanType>TimerUnit_LDD</BeanType>
     <Name>TU1</Name>
     <CompNumb>52</CompNumb>
-    <CompEnabled>true</CompEnabled>
+    <CompEnabled>false</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>CLOCKS_LDD</IconName>
     <UserFolderName />
@@ -22741,9 +22741,187 @@
       <ItemState>
         <ItemSymbol>ChannelList</ItemSymbol>
         <ReadOnly>false</ReadOnly>
-        <ListItemCount>1</ListItemCount>
+        <ListItemCount>0</ListItemCount>
         <UserReadOnly>false</UserReadOnly>
         <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>_InitGrp</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>true</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>InitEnable</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>AutoInitializationGrp</ItemSymbol>
+        <ListItemCount>1</ListItemCount>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>AutoInitialization</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>EventMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>false</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnCounterRestartInitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel0InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel1InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel2InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel3InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel4InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel5InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel6InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>OnChannel7InitMask</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>ClockConfigGrp</ItemSymbol>
+        <ListItemCount>1</ListItemCount>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>_SpeedGrp</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Expanded>false</Expanded>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode0</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode1</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode2</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode3</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode4</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode5</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode6</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>SpeedMode7</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>Channel0</ItemSymbol>
@@ -22967,184 +23145,6 @@
         <ItemSymbol>ChannelCapIntISRHandle0</ItemSymbol>
         <Value />
         <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>_InitGrp</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>true</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>InitEnable</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>AutoInitializationGrp</ItemSymbol>
-        <ListItemCount>1</ListItemCount>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>AutoInitialization</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>EventMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>false</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnCounterRestartInitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel0InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel1InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel2InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel3InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel4InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel5InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel6InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>OnChannel7InitMask</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>ClockConfigGrp</ItemSymbol>
-        <ListItemCount>1</ListItemCount>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>_SpeedGrp</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <Expanded>false</Expanded>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode0</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode1</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode2</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode3</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode4</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode5</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode6</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
-      </ItemState>
-      <ItemState>
-        <ItemSymbol>SpeedMode7</ItemSymbol>
-        <ReadOnly>false</ReadOnly>
-        <UserReadOnly>false</UserReadOnly>
-        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
       </ItemState>
     </Properties>
     <Methods>
@@ -23417,10 +23417,10 @@
         <ReadOnly>true</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>true</Value>
-        <Expanded>true</Expanded>
+        <Value>false</Value>
+        <Expanded>false</Expanded>
         <LastSelection>true</LastSelection>
-        <LastUserSel>yes</LastUserSel>
+        <LastUserSel>never</LastUserSel>
       </ItemState>
       <ItemState>
         <ItemSymbol>OnChannel0Name</ItemSymbol>
@@ -23690,7 +23690,7 @@
         <ItemSymbol>Serial</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>AS1</Value>
+        <Value>USB1</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ConsoleSempahore</ItemSymbol>
@@ -23747,6 +23747,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>KSDK1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>XFormat</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>XF1</Value>
       </ItemState>
     </Properties>
     <Methods>
@@ -24079,6 +24085,28 @@
         <LastSelection>true</LastSelection>
         <LastUserSel>yes</LastUserSel>
         <UsrMethodName>Deinit</UsrMethodName>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>printfIO</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>yes</LastUserSel>
+        <UsrMethodName>printfIO</UsrMethodName>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>printf</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>yes</LastUserSel>
+        <UsrMethodName>printf</UsrMethodName>
       </ItemState>
     </Methods>
     <Events>
@@ -29891,16 +29919,16 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
-        <Expanded>false</Expanded>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>RuntimeCounterUseTickCounter</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
+        <Index>1</Index>
+        <Value>false</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>LDDRuntimeCounterGroup</ItemSymbol>
@@ -29914,7 +29942,948 @@
         <ItemSymbol>RuntimeCntrLDD</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value />
+        <Value>RuntimeCntrLDD</Value>
+        <RegCompType>RuntimeCntrLDD</RegCompType>
+        <RegCompRepository>file:/${ProcessorExpert_loc}/Repositories/Kinetis_Repository</RegCompRepository>
+        <InheritedComponentState>
+          <Repository>file:/${ProcessorExpert_loc}/Repositories/Kinetis_Repository</Repository>
+          <ComponentUUID>com.freescale.processorexpert.ldd.timerunit_ldd</ComponentUUID>
+          <BeanType>TimerUnit_LDD</BeanType>
+          <Name>RTOSCNTRLDD1</Name>
+          <CompNumb>94</CompNumb>
+          <CompEnabled>true</CompEnabled>
+          <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
+          <IconName>CLOCKS_LDD</IconName>
+          <UserFolderName />
+          <Comment lines_count="0" />
+          <Template />
+          <BeanVersion>01.164</BeanVersion>
+          <LightErrorsIgnored>false</LightErrorsIgnored>
+          <Properties>
+            <ItemState>
+              <ItemSymbol>DeviceName</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>true</UserReadOnly>
+              <Value>RTOSCNTRLDD1</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>MainModule</ItemSymbol>
+              <Value>PIT</Value>
+              <SharedPrphMode>false</SharedPrphMode>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Counter</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>PIT_CVAL0</Value>
+              <SharedPrphMode>false</SharedPrphMode>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CounterDir</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <EnumSymbVal>1</EnumSymbVal>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CntWidth</ItemSymbol>
+              <Value>32 bits</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ValueType</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <EnumSymbVal>0</EnumSymbVal>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>InputClock</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>TmgCounter</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>24 MHz</Value>
+              <RuntimeSetting>0</RuntimeSetting>
+              <ReqDevPrescHigh>-1</ReqDevPrescHigh>
+              <ReqDevPrescLow>-1</ReqDevPrescLow>
+              <ReqDevPrescSlow>-1</ReqDevPrescSlow>
+              <ReqDevPrescSpeedMode3>-1</ReqDevPrescSpeedMode3>
+              <ReqDevPrescSpeedMode4>-1</ReqDevPrescSpeedMode4>
+              <ReqDevPrescSpeedMode5>-1</ReqDevPrescSpeedMode5>
+              <ReqDevPrescSpeedMode6>-1</ReqDevPrescSpeedMode6>
+              <ReqDevPrescSpeedMode7>-1</ReqDevPrescSpeedMode7>
+              <ReqExtCompPrescHigh>-1</ReqExtCompPrescHigh>
+              <ReqExtCompPrescLow>-1</ReqExtCompPrescLow>
+              <ReqExtCompPrescSlow>-1</ReqExtCompPrescSlow>
+              <ReqExtCompPrescSpeedMode3>-1</ReqExtCompPrescSpeedMode3>
+              <ReqExtCompPrescSpeedMode4>-1</ReqExtCompPrescSpeedMode4>
+              <ReqExtCompPrescSpeedMode5>-1</ReqExtCompPrescSpeedMode5>
+              <ReqExtCompPrescSpeedMode6>-1</ReqExtCompPrescSpeedMode6>
+              <ReqExtCompPrescSpeedMode7>-1</ReqExtCompPrescSpeedMode7>
+              <ReqSrcClkPrescHigh>-1</ReqSrcClkPrescHigh>
+              <ReqSrcClkPrescLow>-1</ReqSrcClkPrescLow>
+              <ReqSrcClkPrescSlow>-1</ReqSrcClkPrescSlow>
+              <ReqSrcClkPrescSpeedMode3>25483472622</ReqSrcClkPrescSpeedMode3>
+              <ReqStrSrcClkPrescSpeedMode3>Auto select</ReqStrSrcClkPrescSpeedMode3>
+              <ReqSrcClkPrescSpeedMode4>25483472622</ReqSrcClkPrescSpeedMode4>
+              <ReqStrSrcClkPrescSpeedMode4>Auto select</ReqStrSrcClkPrescSpeedMode4>
+              <ReqSrcClkPrescSpeedMode5>25483472622</ReqSrcClkPrescSpeedMode5>
+              <ReqStrSrcClkPrescSpeedMode5>Auto select</ReqStrSrcClkPrescSpeedMode5>
+              <ReqSrcClkPrescSpeedMode6>25483472622</ReqSrcClkPrescSpeedMode6>
+              <ReqStrSrcClkPrescSpeedMode6>Auto select</ReqStrSrcClkPrescSpeedMode6>
+              <ReqSrcClkPrescSpeedMode7>25483472622</ReqSrcClkPrescSpeedMode7>
+              <ReqStrSrcClkPrescSpeedMode7>Auto select</ReqStrSrcClkPrescSpeedMode7>
+              <InitValue>24 MHz</InitValue>
+              <Precision>5.0</Precision>
+              <PrecInProc>true</PrecInProc>
+              <LowLimit />
+              <HighLimit />
+              <List lines_count="0" />
+              <UnitText>MHz</UnitText>
+              <MinCounterTicks>0</MinCounterTicks>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>DSPgrp1</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ExtCounterInput</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>0</Value>
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+              <Base>DEC</Base>
+              <Index>0</Index>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Ext</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value />
+              <SharedPrphMode>false</SharedPrphMode>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>InpPinSignal</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value />
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ExtInitEdge</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>TmgInput</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>1000 kHz</Value>
+              <RuntimeSetting>0</RuntimeSetting>
+              <ReqDevPrescHigh>-1</ReqDevPrescHigh>
+              <ReqDevPrescLow>-1</ReqDevPrescLow>
+              <ReqDevPrescSlow>-1</ReqDevPrescSlow>
+              <ReqDevPrescSpeedMode3>-1</ReqDevPrescSpeedMode3>
+              <ReqDevPrescSpeedMode4>-1</ReqDevPrescSpeedMode4>
+              <ReqDevPrescSpeedMode5>-1</ReqDevPrescSpeedMode5>
+              <ReqDevPrescSpeedMode6>-1</ReqDevPrescSpeedMode6>
+              <ReqDevPrescSpeedMode7>-1</ReqDevPrescSpeedMode7>
+              <ReqExtCompPrescHigh>-1</ReqExtCompPrescHigh>
+              <ReqExtCompPrescLow>-1</ReqExtCompPrescLow>
+              <ReqExtCompPrescSlow>-1</ReqExtCompPrescSlow>
+              <ReqExtCompPrescSpeedMode3>-1</ReqExtCompPrescSpeedMode3>
+              <ReqExtCompPrescSpeedMode4>-1</ReqExtCompPrescSpeedMode4>
+              <ReqExtCompPrescSpeedMode5>-1</ReqExtCompPrescSpeedMode5>
+              <ReqExtCompPrescSpeedMode6>-1</ReqExtCompPrescSpeedMode6>
+              <ReqExtCompPrescSpeedMode7>-1</ReqExtCompPrescSpeedMode7>
+              <ReqSrcClkPrescHigh>1</ReqSrcClkPrescHigh>
+              <ReqSrcClkPrescLow>1</ReqSrcClkPrescLow>
+              <ReqSrcClkPrescSlow>1</ReqSrcClkPrescSlow>
+              <ReqSrcClkPrescSpeedMode3>25483472622</ReqSrcClkPrescSpeedMode3>
+              <ReqStrSrcClkPrescSpeedMode3>Auto select</ReqStrSrcClkPrescSpeedMode3>
+              <ReqSrcClkPrescSpeedMode4>25483472622</ReqSrcClkPrescSpeedMode4>
+              <ReqStrSrcClkPrescSpeedMode4>Auto select</ReqStrSrcClkPrescSpeedMode4>
+              <ReqSrcClkPrescSpeedMode5>25483472622</ReqSrcClkPrescSpeedMode5>
+              <ReqStrSrcClkPrescSpeedMode5>Auto select</ReqStrSrcClkPrescSpeedMode5>
+              <ReqSrcClkPrescSpeedMode6>25483472622</ReqSrcClkPrescSpeedMode6>
+              <ReqStrSrcClkPrescSpeedMode6>Auto select</ReqStrSrcClkPrescSpeedMode6>
+              <ReqSrcClkPrescSpeedMode7>25483472622</ReqSrcClkPrescSpeedMode7>
+              <ReqStrSrcClkPrescSpeedMode7>Auto select</ReqStrSrcClkPrescSpeedMode7>
+              <InitValue>1000 kHz</InitValue>
+              <Precision>5.0</Precision>
+              <PrecInProc>true</PrecInProc>
+              <LowLimit />
+              <HighLimit />
+              <List lines_count="0" />
+              <UnitText>kHz</UnitText>
+              <MinCounterTicks>0</MinCounterTicks>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CounterRestart</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Overrundevice</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value />
+              <SharedPrphMode>false</SharedPrphMode>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>PeriodDevice</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>PIT_LDVAL0</Value>
+              <SharedPrphMode>false</SharedPrphMode>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Tmg_Period</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>0.1 ms</Value>
+              <RuntimeSetting>0</RuntimeSetting>
+              <ReqDevPrescHigh>-1</ReqDevPrescHigh>
+              <ReqDevPrescLow>-1</ReqDevPrescLow>
+              <ReqDevPrescSlow>-1</ReqDevPrescSlow>
+              <ReqDevPrescSpeedMode3>-1</ReqDevPrescSpeedMode3>
+              <ReqDevPrescSpeedMode4>-1</ReqDevPrescSpeedMode4>
+              <ReqDevPrescSpeedMode5>-1</ReqDevPrescSpeedMode5>
+              <ReqDevPrescSpeedMode6>-1</ReqDevPrescSpeedMode6>
+              <ReqDevPrescSpeedMode7>-1</ReqDevPrescSpeedMode7>
+              <ReqExtCompPrescHigh>-1</ReqExtCompPrescHigh>
+              <ReqExtCompPrescLow>-1</ReqExtCompPrescLow>
+              <ReqExtCompPrescSlow>-1</ReqExtCompPrescSlow>
+              <ReqExtCompPrescSpeedMode3>-1</ReqExtCompPrescSpeedMode3>
+              <ReqExtCompPrescSpeedMode4>-1</ReqExtCompPrescSpeedMode4>
+              <ReqExtCompPrescSpeedMode5>-1</ReqExtCompPrescSpeedMode5>
+              <ReqExtCompPrescSpeedMode6>-1</ReqExtCompPrescSpeedMode6>
+              <ReqExtCompPrescSpeedMode7>-1</ReqExtCompPrescSpeedMode7>
+              <ReqSrcClkPrescHigh>-1</ReqSrcClkPrescHigh>
+              <ReqSrcClkPrescLow>-1</ReqSrcClkPrescLow>
+              <ReqSrcClkPrescSlow>-1</ReqSrcClkPrescSlow>
+              <ReqSrcClkPrescSpeedMode3>25483472622</ReqSrcClkPrescSpeedMode3>
+              <ReqStrSrcClkPrescSpeedMode3>Auto select</ReqStrSrcClkPrescSpeedMode3>
+              <ReqSrcClkPrescSpeedMode4>25483472622</ReqSrcClkPrescSpeedMode4>
+              <ReqStrSrcClkPrescSpeedMode4>Auto select</ReqStrSrcClkPrescSpeedMode4>
+              <ReqSrcClkPrescSpeedMode5>25483472622</ReqSrcClkPrescSpeedMode5>
+              <ReqStrSrcClkPrescSpeedMode5>Auto select</ReqStrSrcClkPrescSpeedMode5>
+              <ReqSrcClkPrescSpeedMode6>25483472622</ReqSrcClkPrescSpeedMode6>
+              <ReqStrSrcClkPrescSpeedMode6>Auto select</ReqStrSrcClkPrescSpeedMode6>
+              <ReqSrcClkPrescSpeedMode7>25483472622</ReqSrcClkPrescSpeedMode7>
+              <ReqStrSrcClkPrescSpeedMode7>Auto select</ReqStrSrcClkPrescSpeedMode7>
+              <InitValue>0.1 ms</InitValue>
+              <Precision>5.0</Precision>
+              <PrecInProc>true</PrecInProc>
+              <LowLimit />
+              <HighLimit />
+              <List lines_count="0" />
+              <UnitText>ms</UnitText>
+              <MinCounterTicks>0</MinCounterTicks>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OverrunPeriod</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>0.1 ms</Value>
+              <RuntimeSetting>0</RuntimeSetting>
+              <ReqDevPrescHigh>-1</ReqDevPrescHigh>
+              <ReqDevPrescLow>-1</ReqDevPrescLow>
+              <ReqDevPrescSlow>-1</ReqDevPrescSlow>
+              <ReqDevPrescSpeedMode3>-1</ReqDevPrescSpeedMode3>
+              <ReqDevPrescSpeedMode4>-1</ReqDevPrescSpeedMode4>
+              <ReqDevPrescSpeedMode5>-1</ReqDevPrescSpeedMode5>
+              <ReqDevPrescSpeedMode6>-1</ReqDevPrescSpeedMode6>
+              <ReqDevPrescSpeedMode7>-1</ReqDevPrescSpeedMode7>
+              <ReqExtCompPrescHigh>-1</ReqExtCompPrescHigh>
+              <ReqExtCompPrescLow>-1</ReqExtCompPrescLow>
+              <ReqExtCompPrescSlow>-1</ReqExtCompPrescSlow>
+              <ReqExtCompPrescSpeedMode3>-1</ReqExtCompPrescSpeedMode3>
+              <ReqExtCompPrescSpeedMode4>-1</ReqExtCompPrescSpeedMode4>
+              <ReqExtCompPrescSpeedMode5>-1</ReqExtCompPrescSpeedMode5>
+              <ReqExtCompPrescSpeedMode6>-1</ReqExtCompPrescSpeedMode6>
+              <ReqExtCompPrescSpeedMode7>-1</ReqExtCompPrescSpeedMode7>
+              <ReqSrcClkPrescHigh>-1</ReqSrcClkPrescHigh>
+              <ReqSrcClkPrescLow>-1</ReqSrcClkPrescLow>
+              <ReqSrcClkPrescSlow>-1</ReqSrcClkPrescSlow>
+              <ReqSrcClkPrescSpeedMode3>-1</ReqSrcClkPrescSpeedMode3>
+              <ReqSrcClkPrescSpeedMode4>-1</ReqSrcClkPrescSpeedMode4>
+              <ReqSrcClkPrescSpeedMode5>-1</ReqSrcClkPrescSpeedMode5>
+              <ReqSrcClkPrescSpeedMode6>-1</ReqSrcClkPrescSpeedMode6>
+              <ReqSrcClkPrescSpeedMode7>-1</ReqSrcClkPrescSpeedMode7>
+              <InitValue>0.1 ms</InitValue>
+              <Precision>5.0</Precision>
+              <PrecInProc>true</PrecInProc>
+              <LowLimit />
+              <HighLimit />
+              <List lines_count="0" />
+              <UnitText>ms</UnitText>
+              <MinCounterTicks>0</MinCounterTicks>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>IntServiceCounter</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>true</Value>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CounterInt</ItemSymbol>
+              <Value />
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CounterInitPriority</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>medium priority</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ModuloInt</ItemSymbol>
+              <Value>INT_PIT</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ModuloInitPriority</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>medium priority</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>DSPgrp2</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ModeCounterInt</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ModeModuloInt</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ISRHandleFeatureGroup0</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>CounterIntISRHandle</ItemSymbol>
+              <Value />
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ModuloIntISRHandle</ItemSymbol>
+              <Value />
+              <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ChannelList</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <ListItemCount>0</ListItemCount>
+              <UserReadOnly>false</UserReadOnly>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>_InitGrp</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>InitEnable</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>AutoInitializationGrp</ItemSymbol>
+              <ListItemCount>1</ListItemCount>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>AutoInitialization</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>EventMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Expanded>false</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnCounterRestartInitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel0InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel1InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel2InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel3InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel4InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel5InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel6InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel7InitMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ClockConfigGrp</ItemSymbol>
+              <ListItemCount>1</ListItemCount>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>_SpeedGrp</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Expanded>true</Expanded>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode0</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode1</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode2</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode3</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode4</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode5</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode6</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SpeedMode7</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+            </ItemState>
+          </Properties>
+          <Methods>
+            <ItemState>
+              <ItemSymbol>Init</ItemSymbol>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>always</LastUserSel>
+              <UsrMethodName>Init</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Deinit</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>yes</LastUserSel>
+              <UsrMethodName>Deinit</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Enable</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>Enable</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>Disable</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>0</Index>
+              <Value>true</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>Disable</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SetEventMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SetEventMask</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetEventMask</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetEventMask</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetEventStatus</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetEventStatus</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SelectInputFrequency</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SelectInputFrequency</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetInputFrequencyReal</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetInputFrequencyReal</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetInputFrequency</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetInputFrequency</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SetPeriodTicks</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SetPeriodTicks</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetPeriodTicks</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetPeriodTicks</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ResetCounter</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>ResetCounter</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetCounterValue</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetCounterValue</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SetOffsetTicks</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SetOffsetTicks</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetOffsetTicks</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetOffsetTicks</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetCaptureValue</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetCaptureValue</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SelectOutputAction</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SelectOutputAction</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SelectCaptureEdge</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SelectCaptureEdge</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>ConnectPin</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>ConnectPin</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>SetOperationMode</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>SetOperationMode</UsrMethodName>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>GetDriverState</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Index>1</Index>
+              <Value>false</Value>
+              <LastSelection>false</LastSelection>
+              <LastUserSel>no</LastUserSel>
+              <UsrMethodName>GetDriverState</UsrMethodName>
+            </ItemState>
+          </Methods>
+          <Events>
+            <ItemState>
+              <ItemSymbol>EventModule</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>Events</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnCounterRestart</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>true</Value>
+              <Expanded>true</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>yes</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnCounterRestartName</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnCounterRestart</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel0</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel0Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel0</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel1</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel1Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel1</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel2</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel2Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel2</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel3</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel3Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel3</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel4</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel4Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel4</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel5</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel5Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel5</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel6</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel6Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel6</Value>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel7</ItemSymbol>
+              <ReadOnly>true</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+              <Value>false</Value>
+              <Expanded>false</Expanded>
+              <LastSelection>true</LastSelection>
+              <LastUserSel>never</LastUserSel>
+            </ItemState>
+            <ItemState>
+              <ItemSymbol>OnChannel7Name</ItemSymbol>
+              <ReadOnly>false</ReadOnly>
+              <UserReadOnly>false</UserReadOnly>
+              <Value>RTOSCNTRLDD1_OnChannel7</Value>
+            </ItemState>
+          </Events>
+        </InheritedComponentState>
       </ItemState>
       <ItemState>
         <ItemSymbol>NonLDDRuntimeCounterGroup</ItemSymbol>
@@ -30282,7 +31251,7 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>100</Value>
+        <Value>1000</Value>
         <Base>DEC</Base>
       </ItemState>
       <ItemState>
@@ -30332,7 +31301,7 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>6</Value>
+        <Value>10</Value>
         <Base>DEC</Base>
       </ItemState>
       <ItemState>
@@ -30582,6 +31551,14 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <Value>UTIL1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>RecordStackHighAddress</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
       </ItemState>
     </Properties>
     <Methods>
@@ -31195,10 +32172,10 @@
         <ReadOnly>true</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
+        <Index>0</Index>
+        <Value>true</Value>
         <LastSelection>true</LastSelection>
-        <LastUserSel>never</LastUserSel>
+        <LastUserSel>always</LastUserSel>
         <UsrMethodName>vTaskGetRunTimeStats</UsrMethodName>
       </ItemState>
       <ItemState>
@@ -32093,7 +33070,7 @@
     <BeanType>Timeout</BeanType>
     <Name>TMOUT1</Name>
     <CompNumb>73</CompNumb>
-    <CompEnabled>false</CompEnabled>
+    <CompEnabled>true</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>Timeout</IconName>
     <UserFolderName />
@@ -32237,7 +33214,7 @@
     <BeanType>FSL_USB_Stack</BeanType>
     <Name>USB1</Name>
     <CompNumb>75</CompNumb>
-    <CompEnabled>false</CompEnabled>
+    <CompEnabled>true</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>FSL_USB_Stack</IconName>
     <UserFolderName />
@@ -33512,8 +34489,7 @@
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>1</Index>
-              <EnumSymbVal />
-              <Value />
+              <EnumSymbVal>enabled</EnumSymbVal>
             </ItemState>
             <ItemState>
               <ItemSymbol>ClockSettingGrp</ItemSymbol>
@@ -33624,12 +34600,11 @@
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>0</Index>
-              <EnumSymbVal />
-              <Value />
+              <EnumSymbVal>pllfllClk</EnumSymbVal>
             </ItemState>
             <ItemState>
               <ItemSymbol>ModuleClockFreq</ItemSymbol>
-              <Value>20.972 MHz</Value>
+              <Value>48 MHz</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>PullUpDownGrp</ItemSymbol>
@@ -34694,8 +35669,7 @@
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>0</Index>
-              <EnumSymbVal />
-              <Value />
+              <EnumSymbVal>0</EnumSymbVal>
             </ItemState>
             <ItemState>
               <ItemSymbol>InterruptVector_OTG_ID_CHGPExPriorityFeatureGroup</ItemSymbol>
@@ -36384,6 +37358,78 @@
         <LastSelection>true</LastSelection>
         <LastUserSel>yes</LastUserSel>
         <UsrMethodName>SetLR</UsrMethodName>
+      </ItemState>
+    </Methods>
+    <Events />
+  </Bean>
+  <Bean>
+    <Repository>file:/${home_ProcessorExpert_loc}/MyComponents</Repository>
+    <BeanType>XFormat</BeanType>
+    <Name>XF1</Name>
+    <CompNumb>97</CompNumb>
+    <CompEnabled>true</CompEnabled>
+    <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
+    <IconName>XFormat</IconName>
+    <UserFolderName />
+    <Comment lines_count="0" />
+    <Template>XFormat</Template>
+    <BeanVersion>01.015</BeanVersion>
+    <LightErrorsIgnored>false</LightErrorsIgnored>
+    <Properties>
+      <ItemState>
+        <ItemSymbol>DeviceName</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>XF1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>sdk</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <Value>KSDK1</Value>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>FloatingPointEnabled</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>1</Index>
+        <Value>false</Value>
+      </ItemState>
+    </Properties>
+    <Methods>
+      <ItemState>
+        <ItemSymbol>xvformat</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>yes</LastUserSel>
+        <UsrMethodName>xvformat</UsrMethodName>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>xformat</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>yes</LastUserSel>
+        <UsrMethodName>xformat</UsrMethodName>
+      </ItemState>
+      <ItemState>
+        <ItemSymbol>xsprintf</ItemSymbol>
+        <ReadOnly>false</ReadOnly>
+        <UserReadOnly>false</UserReadOnly>
+        <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
+        <Index>0</Index>
+        <Value>true</Value>
+        <LastSelection>true</LastSelection>
+        <LastUserSel>yes</LastUserSel>
+        <UsrMethodName>xsprintf</UsrMethodName>
       </ItemState>
     </Methods>
     <Events />

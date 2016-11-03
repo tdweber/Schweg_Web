@@ -50,21 +50,26 @@
 #include "BitIoLdd11.h"
 #include "LEDPin3.h"
 #include "BitIoLdd12.h"
-#include "TI1.h"
-#include "TimerIntLdd1.h"
-#include "TU1.h"
 #include "CLS1.h"
 #include "AS1.h"
 #include "ASerialLdd1.h"
 #include "RTT1.h"
 #include "SYS1.h"
 #include "FRTOS1.h"
+#include "RTOSCNTRLDD1.h"
+#include "TMOUT1.h"
+#include "USB1.h"
+#include "CDC1.h"
+#include "Tx1.h"
+#include "Rx1.h"
+#include "USB0.h"
 #include "WAIT1.h"
 #include "CS1.h"
 #include "HF1.h"
 #include "KSDK1.h"
 #include "UTIL1.h"
 #include "KIN1.h"
+#include "XF1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -85,8 +90,8 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-  //APP_Start();
-  RTOS_Run();
+  APP_Start();
+
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
   #ifdef PEX_RTOS_START
