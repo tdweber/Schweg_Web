@@ -182,6 +182,12 @@ void APP_Start(void) {
   CLS1_SendStr((uint8_t*)"Hello World!\r\n", CLS1_GetStdio()->stdOut);
 #endif
   APP_AdoptToHardware();
+
+#if PL_CONFIG_HAS_SHELL_QUEUE
+  SQUEUE_Init();
+#endif
+
+
 #if PL_CONFIG_HAS_RTOS
   vTaskStartScheduler(); /* start the RTOS, create the IDLE task and run my tasks (if any) */
   /* does usually not return! */
