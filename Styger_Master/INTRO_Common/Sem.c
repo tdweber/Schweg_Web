@@ -14,7 +14,7 @@
  * Module using semaphores.
  */
 
-#include "Platform.h" /* interface to the platform */
+#include "Platform.h" /* interface to the platform  Hallo michi*/
 #if PL_CONFIG_HAS_SEMAPHORE
 #include "FRTOS1.h"
 #include "Sem.h"
