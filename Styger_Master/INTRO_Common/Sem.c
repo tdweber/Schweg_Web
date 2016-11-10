@@ -14,13 +14,13 @@
  * Module using semaphores.
  */
 
-#include "Platform.h" /* interface to the platform  Hallo michi*/
+#include "Platform.h" /* interface to the platform*/
 #if PL_CONFIG_HAS_SEMAPHORE
 #include "FRTOS1.h"
 #include "Sem.h"
 #include "LED.h"
 
-#define USE_SEMAPHORES 0
+#define USE_SEMAPHORES 1
 
 #if USE_SEMAPHORES
 static void vSlaveTask(void *pvParameters) {
@@ -33,6 +33,11 @@ static void vSlaveTask(void *pvParameters) {
   }
   for(;;) {
     /*! \todo Implement functionality */
+	  xSemaphoreTake(sem, 0);
+	  LED2_Neg();
+	  xSemaphoreGive(sem);
+	  vTaskDelay(2000/portTICK_PERIOD_MS);
+
   }
 }
 
