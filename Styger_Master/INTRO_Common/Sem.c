@@ -33,11 +33,9 @@ static void vSlaveTask(void *pvParameters) {
   }
   for(;;) {
     /*! \todo Implement functionality */
-	  xSemaphoreTake(sem, 0);
-	  LED2_Neg();
-	  xSemaphoreGive(sem);
-	  vTaskDelay(2000/portTICK_PERIOD_MS);
-
+	  if(xSemaphoreTake(sem, 0)==pdPASS){
+		  LED2_Neg();
+	  }
   }
 }
 
