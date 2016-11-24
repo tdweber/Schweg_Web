@@ -102,6 +102,8 @@
 #include "UTIL1.h"
 #include "KIN1.h"
 
+#include "Tacho.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif 
