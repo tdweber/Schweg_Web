@@ -19,6 +19,7 @@
 #include "FRTOS1.h"
 #include "Sem.h"
 #include "LED.h"
+#include "Pid.h"
 
 #define USE_SEMAPHORES 1
 
@@ -35,6 +36,7 @@ static void vSlaveTask(void *pvParameters) {
     /*! \todo Implement functionality */
 	  if(xSemaphoreTake(sem, portMAX_DELAY)==pdPASS){
 		  LED2_Neg();
+		  //PID_Speed();
 	  }
   }
 }
