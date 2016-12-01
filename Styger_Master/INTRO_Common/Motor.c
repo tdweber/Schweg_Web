@@ -217,8 +217,8 @@ void MOT_Init(void) {
   motorR.DirPutVal = DirRPutVal;
   motorL.SetRatio16 = PWMLSetRatio16;
   motorR.SetRatio16 = PWMRSetRatio16;
-  MOT_SetSpeedPercent(&motorL, 10);
-  MOT_SetSpeedPercent(&motorR, 10);
+  MOT_SetSpeedPercent(&motorL, 0);
+  MOT_SetSpeedPercent(&motorR, 0);
   (void)PWML_Enable();
   (void)PWMR_Enable();
 }

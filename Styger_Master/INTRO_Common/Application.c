@@ -63,6 +63,10 @@ void APP_EventHandler(EVNT_Handle event) {
     SHELL_SendString("SW1 pressed\r\n");
     #if PL_CONFIG_HAS_BUZZER
     BUZ_PlayTune(BUZ_TUNE_BUTTON);
+
+    LF_StartFollowing();
+
+
     #endif
     break;
   #endif
@@ -167,6 +171,11 @@ static void Critical(void) {
 #include "CLS1.h"
 
 void APP_Start(void) {
+	//INIT
+
+
+
+
 #if PL_CONFIG_HAS_RTOS
 #if configUSE_TRACE_HOOKS
   PTRC1_uiTraceStart();
@@ -207,6 +216,8 @@ void APP_Start(void) {
     //CLS1_SendStr((uint8_t*)"hello world!\r\n", CLS1_GetStdio()->stdOut);
   }
 #endif
+
+
 }
 
 
