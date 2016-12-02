@@ -158,12 +158,6 @@ void SW2_OnInterrupt(void)
 void SW1_OnInterrupt(void)
 {
   /* Write your code here ... */
-	if(mode == 0){
-		mode = 1;
-	}
-	else{
-		mode = 0;
-	}
 }
 
 /*

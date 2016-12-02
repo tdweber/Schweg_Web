@@ -15,7 +15,6 @@
 #include "RPHY.h"
 
 uint8_t REMOTE_HandleRemoteRxMessage(RAPP_MSG_Type type, uint8_t size, uint8_t *data, RNWK_ShortAddrType srcAddr, bool *handled, RPHY_PacketDesc *packet);
-//extern int mode;
 
 /*!
  * \brief Function to find out if the remote controller is enabled or not.
