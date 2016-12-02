@@ -37,6 +37,8 @@
   #include "PORT_PDD.h"
 #endif
 
+int cnt=0;
+
 #if PL_CONFIG_HAS_EVENTS
 void APP_EventHandler(EVNT_Handle event) {
   switch(event) {
@@ -58,14 +60,21 @@ void APP_EventHandler(EVNT_Handle event) {
 #if PL_CONFIG_HAS_KEYS
   #if PL_CONFIG_NOF_KEYS>=1
   case EVNT_SW1_PRESSED:
+
     LED1_Neg();
     //CLS1_SendStr("SW1 pressed\r\n", CLS1_GetStdio()->stdOut);
     SHELL_SendString("SW1 pressed\r\n");
     #if PL_CONFIG_HAS_BUZZER
     BUZ_PlayTune(BUZ_TUNE_BUTTON);
 
-    LF_StartFollowing();
-
+    if(cnt==0){
+    	LF_StartFollowing();
+    	cnt=1;
+    }
+    if(cnt==1){
+    	LF_StopFollowing();
+    	cnt=0;
+    }
 
     #endif
     break;

@@ -26,6 +26,10 @@
   #include "Remote.h"
 #endif
 
+#if RNET_CONFIG_REMOTE_STDIO
+#include "RStdIO.h"
+#endif
+
 static RNWK_ShortAddrType APP_dstAddr = RNWK_ADDR_BROADCAST; /* destination node address */
 
 typedef enum {
@@ -120,6 +124,10 @@ static void Process(void) {
     break; /* break for loop */
   } /* for */
 }
+
+
+
+
 
 static void Init(void) {
   if (RAPP_SetThisNodeAddr(RNWK_ADDR_BROADCAST)!=ERR_OK) { /* set a default address */
