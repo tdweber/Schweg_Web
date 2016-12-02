@@ -36,6 +36,7 @@
   #include "Shell.h"
 #endif
 
+int mode = 0;
 static bool REMOTE_isOn = FALSE;
 static bool REMOTE_isVerbose = FALSE;
 static bool REMOTE_useJoystick = TRUE;
@@ -97,6 +98,12 @@ static uint8_t REMOTE_GetXY(uint16_t *x, uint16_t *y, int8_t *x8, int8_t *y8) {
 static void RemoteTask (void *pvParameters) {
   (void)pvParameters;
 #if PL_CONFIG_HAS_JOYSTICK
+  if(mode == 1){
+	  REMOTE_SetOnOff(TRUE);
+  }
+  else{
+	  REMOTE_SetOnOff(FALSE);
+  }
   (void)REMOTE_GetXY(&midPointX, &midPointY, NULL, NULL);
 #endif
   FRTOS1_vTaskDelay(1000/portTICK_PERIOD_MS);
