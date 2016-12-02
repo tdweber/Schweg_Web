@@ -105,12 +105,15 @@ static void StateMachine(void) {
       #if PL_CONFIG_HAS_LINE_MAZE
       /*! \todo Handle maze turning */
       #endif /* PL_CONFIG_HAS_LINE_MAZE */
+    	TURN_TurnAngle(180, NULL);
       break;
 
     case STATE_FINISHED:
       #if PL_CONFIG_HAS_LINE_MAZE
       /*! \todo Handle maze finished */
       #endif /* PL_CONFIG_HAS_LINE_MAZE */
+
+    	LF_StopFollowing();
       break;
     case STATE_STOP:
       SHELL_SendString("Stopped!\r\n");

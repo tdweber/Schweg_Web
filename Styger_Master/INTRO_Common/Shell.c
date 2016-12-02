@@ -92,6 +92,7 @@ typedef struct {
   size_t bufSize;
 } SHELL_IODesc;
 
+
 #if CLS1_DEFAULT_SERIAL && (SHELL_CONFIG_HAS_SHELL_EXTRA_CDC || SHELL_CONFIG_HAS_SHELL_EXTRA_RTT)
   static void SHELL_SendChar(uint8_t ch) {
     /* everything sent to the standard I/O will be sent to additional channels */
@@ -227,6 +228,7 @@ void SHELL_SendString(unsigned char *msg) {
 #endif
 }
 
+
 /*!
  * \brief Prints the help text to the console
  * \param io StdIO handler
@@ -276,13 +278,31 @@ static uint8_t SHELL_ParseCommand(const unsigned char *cmd, bool *handled, const
   return ERR_OK;
 }
 
+void SHELL_ParseCmd(const unsigned char *cmd){
+	#if CLS1_DEFAULT_SERIAL
+	CLS1_ParseWithCommandTable(cmd, CLS1_GetStdio(), CmdParserTable);
+	#endif
+}
+
+
+
+
 #if PL_CONFIG_HAS_RTOS
 static void ShellTask(void *pvParameters) {
+
 #if SHELL_HANDLER_ARRAY
   int i;
 #endif
   /* \todo Extend as needed */
+#if RNET_CONFIG_REMOTE_STDIO
+static unsigned char radio_cmd_buf[48];
+CLS1_ConstStdIOType *ioRemote = RSTDIO_GetStdioRx();
+#endif
 
+
+#if RNET_CONFIG_REMOTE_STDIO
+radio_cmd_buf[0] = '\0';
+#endif
   (void)pvParameters; /* not used */
 #if SHELL_HANDLER_ARRAY
   /* initialize buffers */
@@ -295,6 +315,12 @@ static void ShellTask(void *pvParameters) {
   (void)CLS1_ParseWithCommandTable((unsigned char*)CLS1_CMD_HELP, ios[0].stdio, CmdParserTable);
 #endif
   for(;;) {
+
+#if RNET_CONFIG_REMOTE_STDIO
+	RSTDIO_Print(ioRemote); /* dispatch incoming messages and send them to local standard */
+	(void)CLS1_ReadAndParseWithCommandTable(radio_cmd_buf, sizeof(radio_cmd_buf), ioRemote, CmdParserTable);
+#endif
+
 #if SHELL_HANDLER_ARRAY
     /* process all I/Os */
     for(i=0;i<sizeof(ios)/sizeof(ios[0]);i++) {
